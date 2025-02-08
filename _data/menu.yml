@@ -4,10 +4,10 @@
 entries:
   - title: info
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
-      - title: github repo
-        url: https://github.com/riggraz/no-style-please
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: also known as "Rachmadi Adji Prakoso"
+      - title: a penetration tester and a wannabe programmer
+      - title: "check out my latest <a href='https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link'>résumé</a>, as well as my <a href='https://linkedin.com/in/rchmdaprks'>LinkedIn profile</a>."
+      - title: as there will be upcoming updates soon...
 
   - title: all posts
     post_list:
