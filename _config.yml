@@ -1,10 +1,8 @@
 title: prxcmon's site # name of the site
-author: Rachmadi Adji Prakoso # name of site's author
 email: rchmdaprks@gmail.com # email of site's author
-url: https://prxcmon.github.io # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
-  Personal site
+  It's personal, and it always has been
 
 permalink: /:slug.html
 
@@ -26,12 +24,23 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jektex
 
-jektex:
-  cache_dir: ".jektex-cache"
-  ignore: ["*.xml"]
-  silent: false
-  macros:
-    - ["\\Q", "\\mathbb{Q}"]
-    - ["\\C", "\\mathbb{C}"]
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

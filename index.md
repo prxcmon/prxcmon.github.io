@@ -1,3 +1,54 @@
 ---
-layout: home
+layout: default
+title: prxcmon
 ---
+
+#### [Home](/) | [Blogs](/blogs/) | [Notes](/notes/) 
+
+# prxcmon's ground zero
+> "Hold up and analyze"
+> — Raekwon
+
+## 0x00 - whoami
+
+- **Rachmadi Adji Prakoso**, a.k.a `prxcmon`
+- Skilled in Offensive Application Security for more than two years
+- Currently working as daily penetration tester and seasonal CTF player
+- Have interests in application security, recently start learning in linux kernel and malware development, as well as Gang Starr, Mobb Deep, Wu-Tang Clan, and other nineties of East Coast hip-hop scenes
+- Fluent in native indonesian, english, et je comprends français
+
+## 0x01 - work-exps
+
+### [Cyberkarta](https://cyberkarta.com/){:target="_blank"}: In-contract Penetration Tester
+July 2024 - July 2025
+- In-charge for leading pentest teams
+- Daily application penetration testing (web, API, and mobile)
+- Participate in an undisclosed research and development project
+- Android Studio, Apidog, Burp Suite, C, C++, Drozer, GitHub, Nmap, Nuclei, YAML
+
+### [Xendit](https://www.xendit.co/en/){:target="_blank"}: Product Security Engineer
+February 2022 - February 2024
+- Started application penetration testing services (web application and API)
+- Performed vulnerability assessment based on ISO27001 and PCI-DSS
+- Participated in DAST research
+- Aircrack-Ng, Burp Suite, Kismet, Nessus, OWASP ZAP, Postman, Qualys
+
+## 0x02 - certs
+
+### 2025
+To be added (soon)
+
+### 2024
+- [OffSec Certified Professional (OSCP)](https://www.credential.net/e7050ed1-562f-416e-8426-40430aa5d864){:target="_blank"}
+- [Certified Ethical Hacker (CEH)](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=tQElESQyYapLQfAGVofD9HOnBD5V/ceblk1nQwKZIZk=){:target="_blank"}
+
+## 0x03 - links
+### projects
+- [Résumé](https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link){:target="_blank"}
+- [GitHub](https://github.com/prxcmon){:target="_blank"}
+- [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
+
+### contact
+- [Email](mailto:rchmdaprks@gmail.com){:target="_blank"} 
+- [LinkedIn](https://linkedin.com/in/rchmdaprks){:target="_blank"} 
+- [X, formerly Twitter](https://x.com/prxcmon){:target="_blank"} 
