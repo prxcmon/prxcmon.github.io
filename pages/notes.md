@@ -8,7 +8,7 @@ permalink: /notes/
 
 # Notes
 
-Some interesting notes or guides that I will add here. _Keep an eye out for the new updates!_
+Some interesting guides that I will add here. _Keep an eye out for the new updates!_
 
 {% assign categories = site.notes | group_by: "category" %}
 

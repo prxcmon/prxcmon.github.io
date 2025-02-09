@@ -7,27 +7,28 @@ title: prxcmon
 
 # prxcmon's ground zero
 > "Hold up and analyze"
-> — Raekwon
+> —Raekwon
 
 ## 0x00 - whoami
 
 - **Rachmadi Adji Prakoso**, a.k.a `prxcmon`
-- Skilled in Offensive Application Security for more than two years
+- Proficient in Application IT Security for more than two years
 - Currently working as daily penetration tester and seasonal CTF player
-- Have interests in application security, recently start learning in linux kernel and malware development, as well as Gang Starr, Mobb Deep, Wu-Tang Clan, and other nineties of East Coast hip-hop scenes
+- An _aficionado_ of offensive cyber security, recently (this year) starting to learn linux kernel and malware development
+- Have interests of Gang Starr, Mobb Deep, Wu-Tang Clan, and other nineties of East Coast hip-hop scenes
 - Fluent in native indonesian, english, et je comprends français
 
 ## 0x01 - work-exps
 
 ### [Cyberkarta](https://cyberkarta.com/){:target="_blank"}: In-contract Penetration Tester
-July 2024 - July 2025
+July 2024 — ongoing, end on July 2025
 - In-charge for leading pentest teams
 - Daily application penetration testing (web, API, and mobile)
 - Participate in an undisclosed research and development project
 - Android Studio, Apidog, Burp Suite, C, C++, Drozer, GitHub, Nmap, Nuclei, YAML
 
 ### [Xendit](https://www.xendit.co/en/){:target="_blank"}: Product Security Engineer
-February 2022 - February 2024
+February 2022 — February 2024
 - Started application penetration testing services (web application and API)
 - Performed vulnerability assessment based on ISO27001 and PCI-DSS
 - Participated in DAST research
@@ -49,6 +50,6 @@ To be added (soon)
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
 
 ### contact
-- [Email](mailto:rchmdaprks@gmail.com){:target="_blank"} 
+- [Email](mailto:rchmdxp@proton.me){:target="_blank"} 
 - [LinkedIn](https://linkedin.com/in/rchmdaprks){:target="_blank"} 
 - [X, formerly Twitter](https://x.com/prxcmon){:target="_blank"} 
