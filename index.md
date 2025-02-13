@@ -12,11 +12,10 @@ title: prxcmon
 ## 0x00 - whoami
 
 - **Rachmadi Adji Prakoso**, a.k.a `prxcmon`
-- Proficient in Application IT Security for more than two years
+- An _aficionado_ of offensive cyber security; proficient in Application IT Security for more than two years
 - Currently working as daily penetration tester and seasonal CTF player
-- An _aficionado_ of offensive cyber security, recently (this year) starting to learn linux kernel and malware development
-- Have interests of Gang Starr, Mobb Deep, Wu-Tang Clan, and other nineties of East Coast hip-hop scenes
-- Fluent in native indonesian, english, et je comprends français
+- Starting to learn C, C++, linux kernel development, and malware development 
+- Fluent in native indonesian, as well as english, et je comprends français
 
 ## 0x01 - work-exps
 
@@ -25,13 +24,14 @@ July 2024 — ongoing, end on July 2025
 - In-charge for leading pentest teams
 - Daily application penetration testing (web, API, and mobile)
 - Participate in an undisclosed research and development project
-- Android Studio, Apidog, Burp Suite, C, C++, Drozer, GitHub, Nmap, Nuclei, YAML
+- Android Studio, Apidog, Burp Suite, Drozer, GitHub, Nmap, Nuclei
 
 ### [Xendit](https://www.xendit.co/en/){:target="_blank"}: Product Security Engineer
 February 2022 — February 2024
+- Participated in DAST research
 - Started application penetration testing services (web application and API)
 - Performed vulnerability assessment based on ISO27001 and PCI-DSS
-- Participated in DAST research
+- Initiated the wireless network penetration testing
 - Aircrack-Ng, Burp Suite, Kismet, Nessus, OWASP ZAP, Postman, Qualys
 
 ## 0x02 - certs
@@ -45,9 +45,9 @@ To be added (soon)
 
 ## 0x03 - links
 ### projects
-- [Résumé](https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link){:target="_blank"}
 - [GitHub](https://github.com/prxcmon){:target="_blank"}
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
+- [Résumé](https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link){:target="_blank"}
 
 ### contact
 - [Email](mailto:rchmdxp@proton.me){:target="_blank"} 
