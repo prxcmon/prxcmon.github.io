@@ -12,7 +12,7 @@ title: prxcmon
 ## 0x00 - whoami
 
 - **Rachmadi Adji Prakoso**, a.k.a `prxcmon`
-- An _aficionado_ of offensive cyber security; proficient in Application IT Security for more than two years
+- An _aficionado_ of offensive cyber security; proficient in the application-based IT Security for more than two years
 - Currently working as daily penetration tester and seasonal CTF player
 - Starting to learn C, C++, linux kernel development, and malware development 
 - Fluent in native indonesian, as well as english, et je comprends français
@@ -30,7 +30,7 @@ July 2024 — ongoing, end on July 2025
 February 2022 — February 2024
 - Participated in DAST research
 - Started application penetration testing services (web application and API)
-- Performed vulnerability assessment based on ISO27001 and PCI-DSS
+- Performed vulnerability assessment based on ISO-27001 and PCI-DSS
 - Initiated the wireless network penetration testing
 - Aircrack-Ng, Burp Suite, Kismet, Nessus, OWASP ZAP, Postman, Qualys
 
@@ -47,7 +47,7 @@ To be added (soon)
 ### projects
 - [GitHub](https://github.com/prxcmon){:target="_blank"}
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
-- [Résumé](https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link){:target="_blank"} (Make sure keep up with the latest updates)
+- [Résumé](https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link){:target="_blank"} (Make sure to keep up with the latest updates)
 - [Roadmap.sh](https://roadmap.sh/u/prxcmon){:target="_blank"}
 
 ### contact
