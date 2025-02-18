@@ -47,7 +47,7 @@ To be added (soon)
 ### projects
 - [GitHub](https://github.com/prxcmon){:target="_blank"}
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
-- [Résumé](https://drive.google.com/file/d/12L3kLF5U9pOtqZLXzbipvJYlPNxiri9I/view?usp=drive_link){:target="_blank"} (Make sure to keep up with the latest updates)
+- [Résumé](/assets/resume,pdf){:target="_blank"} (Make sure to keep up with the latest updates)
 - [Roadmap.sh](https://roadmap.sh/u/prxcmon){:target="_blank"}
 
 ### contact
