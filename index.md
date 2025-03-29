@@ -14,7 +14,7 @@ title: prxcmon
 - **Rachmadi Adji Prakoso**, a.k.a `prxcmon`
 - An _aficionado_ of offensive cyber security; proficient in the application-based IT Security for more than two years
 - Currently working as daily penetration tester and seasonal CTF player
-- Starting to learn C, C++, linux kernel development, and malware development 
+- Starting to learn scripting with C and Go, as well as keen to research other topics, including Linux Kernel Development
 - Fluent in native indonesian, as well as english, et je comprends français
 
 ## 0x01 - work-exps
@@ -47,8 +47,8 @@ To be added (soon)
 ### projects
 - [GitHub](https://github.com/prxcmon){:target="_blank"}
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
-- [Résumé](/assets/resume.pdf){:target="_blank"} (Make sure to keep up with the latest updates)
-- [Roadmap.sh](https://roadmap.sh/u/prxcmon){:target="_blank"}
+    - Solved [Dante](/assets/local-badges-and-certs/0195dbf6-4cd8-750b-ab64-9db33b23c131-htb-dante.pdf){:target="_blank"} Pro-Labs
+- [Résumé](/assets/0195dbf7-02e1-792e-8268-7cd3f4cd9a5b-resume.pdf){:target="_blank"} (Make sure to keep up with the latest updates)
 
 ### contact
 - [Email](mailto:rchmdxp@proton.me)
