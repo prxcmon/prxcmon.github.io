@@ -48,7 +48,7 @@ To be added (soon)
 - [GitHub](https://github.com/prxcmon){:target="_blank"}
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
     - Solved [Dante](/assets/local-badges-and-certs/0195dbf6-4cd8-750b-ab64-9db33b23c131-htb-dante.pdf){:target="_blank"} Pro-Labs
-- [Résumé](/assets/0195dbf7-02e1-792e-8268-7cd3f4cd9a5b-resume.pdf){:target="_blank"} (Make sure to keep up with the latest updates)
+- [Résumé](/assets/fac6efee-c098-4990-87cc-59d3f231619d-resume.pdf){:target="_blank"} (Make sure to keep up with the latest updates)
 
 ### contact
 - [Email](mailto:rchmdxp@proton.me)
