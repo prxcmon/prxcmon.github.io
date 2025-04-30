@@ -5,7 +5,7 @@ date: 2025-04-27
 category: Device Setup
 permalink: /notes/device-setup/rootd-Android14.html
 ---
-# 0x00 - Intro
+# [0x00 - Intro](#0x00---intro)
 I'd like to share one of my guides on how to setup my Samsung Android device for pentesting purposes, from the beginning (android device rooting) until setting up certificates for proxy interception. Once everything is set, we can use it to perform APK pentesting engagements using our rooted android device.
 
 At this time of writing, I have a personal device that I'm gonna use for my next APK-based pentest engagements. Within this note, I'll show you on how to root my old (Android 14) Samsung smartphone (device) for fun that youse can use it in an Android/APK pentests or bug bounty hunting engagements. If you're using other Samsung Android OS versions, starting from Android 9 to Android 15, youse can also follow along to practice your device rooting skills.
@@ -13,48 +13,48 @@ At this time of writing, I have a personal device that I'm gonna use for my next
 Please not that my Android has been on factory reset thus the warranty has been void, so this steps could be different depending on how would you root the process.
 
 ---
-## 0x001 - Table of contents
-- [0x00 - Intro](#0x00)
-- [0x001 - Table of contents](#0x001)
-- [0x01 - Installing Prerequisites](#0x01)
-- [0x02 - Steps for rooting Android](#0x02)
-  - [0x021 - Unlock OEM and Enable USB Debugging through Developer Mode](#0x021)
-  - [0x022 - Create the Magisk-Patched File](#0x022)
-  - [0x023 - Unlocking Samsung Bootloader](#0x023)
-  - [0x024 Flash the Magisk Patched Firmware](#0x024)
-    - [0x0241 - Fixing `ioctl bulk read Fail` error](#0x0241)
-    - [0x0242 - Last Resort](#0x0242)
-- [0x03 - Installing Proxy Certificates](#0x03)
-  - [0x031 - Download, export, and convert the `cacert.der`](#0x031)
-  - [0x032 - Importing `cacert.der` to android device](#0x032)
-    - [0x0321 - Magisk Module Template (MMT) Extended (< Android 14)](#0x0321)
-    - [0x0322 - Cert-Fixer (>= Android 14, up to (the upcoming) Android 15)](#0x0322)
-  - [0x033 - Verify the certificate through traffic proxying](#0x033)
-- # [0xff - External Sources and Other Guides](#0xff)
-  - ## [Blogs](#0xff-blogs)
-  - ## [YouTube Guides](#0xff-yt-guides)
+## [0x001 - Table of contents](#0x001---table-of-contents)
+- [0x00 - Intro](#0x00---intro)
+- [0x001 - Table of contents](#0x001---table-of-contents)
+- [0x01 - Installing Prerequisites](#0x01---installing-prerequisites)
+- [0x02 - Steps for rooting Android](#0x02---steps-for-rooting-android)
+  - [0x021 - Unlock OEM and Enable USB Debugging through Developer Mode](#0x021---unlock-oem-and-enable-usb-debugging-through-developer-mode)
+  - [0x022 - Create the Magisk-Patched File](#0x022---create-the-magisk-patched-file)
+  - [0x023 - Unlocking Samsung Bootloader](#0x023---unlocking-samsung-bootloader)
+  - [0x024 - Flash the Magisk Patched Firmware](#0x024---flash-the-magisk-patched-firmware)
+    - [0x0241 - Fixing `ioctl bulk read Fail` error](#0x0241---fixing-ioctl-bulk-read-fail-error)
+    - [0x0242 - Last Resort](#0x0242---last-resort)
+- [0x03 - Installing Proxy Certificates](#0x03---installing-proxy-certificates)
+  - [0x031 - Download, export, and convert the `cacert.der`](#0x031---download-export-and-convert-the-cacertder)
+  - [0x032 - Importing `cacert.der` to android device](#0x032---importing-cacertder-to-android-device)
+    - [0x0321 - Magisk Module Template (MMT) Extended (< Android 14)](#0x0321---magisk-module-template-mmt-extended--android-14)
+    - [0x0322 - Cert-Fixer (>= Android 14, up to (the upcoming) Android 15)](#0x0322---cert-fixer--android-14-up-to-the-upcoming-android-15)
+  - [0x033 - Verify the certificate through traffic proxying](#0x033---verify-the-certificate-through-traffic-proxying)
+- [0xff - External Sources and Other Guides](#0xff---external-sources-and-other-guides)
+  - [Blogs](#blogs)
+  - [YouTube Guides](#youtube-guides)
 
-
-
-# [0x01 - Installing Prerequisites](#0x01)
+# [0x01 - Installing Prerequisites](#0x01---installing-prerequisites)
 Make sure that you have everything setup for the rooting process. Here, I'm using **SM-G998B/DS** as a rooting device, as well as several other tools that might reliable for the rooting process.
 - Android ADB from `platform-tools`, which can be installed in two ways:
   - **Android Studio** has embedded Sdk function of `platform-tools`
   - **Manual download** [link](https://developer.Android.com/tools/releases/platform-tools){:target="_blank"} with no Android Studio required
 - Stock Samsung Firmware, which can be installed in two ways
   - [**SamFw**](https://samfw.com/){:target="_blank"}
-   - Check your current firmware under the *Settings* > *About phone* > *Software information* > *Baseband version*
-   - Copy the *Baseband version* number (starts from `G998BXXXXXXXX`) and use it to download the firmwares 
-   - Make sure that the firmware you'll download (on the **Download SamFw Server** button) in accordance with the region you're located in
-   - Once it's downloaded, extract the downloaded ZIP file
+    - Check your current firmware under the *Settings* > *About phone* > *Software information* > *Baseband version*
+    - Copy the *Baseband version* number (starts from `G998BXXXXXXXX`) and use it to download the firmwares 
+    - Make sure that the firmware you'll download (on the **Download SamFw Server** button) in accordance with the region you're located in
+    - Once it's downloaded, extract the downloaded ZIP file
   - [**Frija**](https://github.com/SlackingVeteran/frija/releases){:target="blank"} (Windows Only)
-   - 
+    - Ensure to fill in the details of the **model name**, **CSC** (the local code; i.e. XID), and **serial number** device
+    - The UI should looked like this, especially for the updated version
+      ![Source: https://www.androidiani.com/forum/android-tips-tricks/559457-tool-frija-controllo-e-download-dei-firmware-samsung.html](/assets/rootd-Android14/frija-ui-latest.png)
 - Magisk App ([download link](https://github.com/topjohnwu/magisk/releases){:target="_blank"}, make sure to download the latest one)
 - Proxy Certificates (we'll be using `cacert.der` from Burp Suite)
 
 ---
-# [0x02 - Steps for rooting Android](#0x02)
-## [0x021 - Unlock OEM and Enable USB Debugging through Developer Mode](#0x021)
+# [0x02 - Steps for rooting Android](#0x02---steps-for-rooting-android)
+## [0x021 - Unlock OEM and Enable USB Debugging through Developer Mode](#0x021---unlock-oem-and-enable-usb-debugging-through-developer-mode)
 > Prerequisites:
 > - None
 
@@ -78,7 +78,7 @@ The option `Allow USB debugging?` will show up on the Android, then we tap *Allo
 ![](/assets/rootd-Android14/allow-usb-debugging.png)
 ![](/assets/rootd-Android14/adb-devices-enabled.png)
 
-## [0x022 - Create the Magisk-Patched File](#0x022)
+## [0x022 - Create the Magisk-Patched File](#0x022---create-the-magisk-patched-file)
 > Prerequisites:
 > - Samsung (AP) Firmware
 > - Magisk App
@@ -110,7 +110,7 @@ $ adb pull /storage/emulated/0/Download/magisk_patched-xxxxx_xxxxx.tar .
 ```
 ![](/assets/rootd-Android14/adb-pull.png)
 
-## [0x023 - Unlocking Samsung Bootloader](#0x023)
+## [0x023 - Unlocking Samsung Bootloader](#0x023---unlocking-samsung-bootloader)
 > Prerequisites:
 > - None
 
@@ -130,7 +130,7 @@ After that, we can verify that the bootloader has been unlocked by referring bac
 ![](/assets/rootd-Android14/oem-bootloader-unlocked.jpg)
 As we can see, the option **OEM unlocking** has been enabled and it can't be disabled.
 
-## [0x024 Flash the Magisk Patched Firmware](#0x024)
+## [0x024 - Flash the Magisk Patched Firmware](#0x024---flash-the-magisk-patched-firmware)
 > Prerequisites:
 > - Magisk-patched AP firmware
 > - All of Samsung firmwares
@@ -154,7 +154,7 @@ $ odin4 -b BL_G998Bxxxxxx.tar.md5 -a magisk_patched-xxxxx_xxxxx.tar -c CP_G998Bx
 ```
 ![](/assets/rootd-Android14/odin4-flash.png)
 
-### [0x0241 - Fixing `ioctl bulk read Fail` error](#0x0241)
+### [0x0241 - Fixing `ioctl bulk read Fail` error](#0x0241---fixing-ioctl-bulk-read-fail-error)
 During my previous testing, I got the following error
 ```
 ...
@@ -186,12 +186,12 @@ Does this mean that the problem is solved? **NO**.
 As it turns out, checking the `lsusb` shows my current android has been **misidentified** under `GT-I9100`, instead of `SM-G998B`.
 ![](/assets/rootd-Android14/misidentified.png)
 
-### [0x0242 - Last Resort](#0x0242)
+### [0x0242 - Last Resort](#0x0242---last-resort)
 Due to the personal time constraint, I tried using Odin on another Windows PC by installing [Odin v3], copy the entire firmwares in my personal device, including the AP firmware that has been patched with Magisk, and try flashing the firmware again.
 
 To save some time during my rooting process, here's the steps that you can follow to perform the rooting process.
 1. Download the the Samsung firmwares with Frija, in accordance with the region through CSC code. Once its done, extract the file
-2. Export the AP firmware file to the android, then, create a custom patch of the exported AP firmware file with Magisk (see [0x022 - Create the Magisk-Patched File](#0x022))
+2. Export the AP firmware file to the android, then, create a custom patch of the exported AP firmware file with Magisk (see [0x022 - Create the Magisk-Patched File](#0x024---flash-the-magisk-patched-firmware))
 3. Export the patched AP firmware back to the PC (I'm using Windows, the steps are the same with Linux as well)
    ![](/assets/rootd-Android14/odin3-files.png)
 4. Since I'm running Windows PC for the last resort, connect the android to the PC and make sure to enter the **Download Mode**. If it's succeeded, the log file on Odin3 will display `<ID:0/008> Added!!` warning log.
@@ -205,8 +205,8 @@ To save some time during my rooting process, here's the steps that you can follo
    - Make sure to reinstall Magisk again. We'll be using it later to import our (Burp Suite) proxy certificate.
     ![](/assets/rootd-Android14/reinstall-magisk.jpg)
 
-# [0x03 - Installing Proxy Certificates](#0x03)
-## [0x031 - Download, export, and convert the `cacert.der`](#0x031)
+# [0x03 - Installing Proxy Certificates](#0x03---installing-proxy-certificates)
+## [0x031 - Download, export, and convert the `cacert.der`](#0x031---download-export-and-convert-the-cacertder)
 > Prerequisites:
 > - `cacert.der`
 
@@ -230,7 +230,7 @@ $ mv ./cacert.pem ./$HASH.0
 ![](/assets/rootd-Android14/cacert.png)
 The `$HASH` value is `9a5ba575`, make sure to match with this guide.
 
-## [0x032 - Importing `cacert.der` to android device](#0x032)
+## [0x032 - Importing `cacert.der` to android device](#0x032---importing-cacertder-to-android-device)
 > Prerequisites:
 > - Magisk ([Zygisk](https://topjohnwu.github.io/Magisk/guides.html#zygisk){:target="_blank"} enabled)
 
@@ -243,7 +243,7 @@ On earlier versions of Android, we can simply write the certificates to the andr
 
 In this guide, I'll show youse on how to write `cacert.der` into `/system` CA certificates based on the Magisk module that can be used depending on the Android versions
 
-### [0x0321 - Magisk Module Template (MMT) Extended (< Android 14)](#0x0321)
+### [0x0321 - Magisk Module Template (MMT) Extended (< Android 14)](#0x0321---magisk-module-template-mmt-extended--android-14)
 First thing first, we need to clone the MMT-Ex repository from this [site](https://github.com/Zackptg5/MMT-Extended/){:target="_blank"}.
 ```bash
 $ git clone https://github.com/Zackptg5/MMT-Extended; cd MMT-Extended
@@ -300,7 +300,7 @@ Once the module has been installed, reboot the Android device. If everything run
 - If everything runs correctly, we may get the Proxy Certificate installed under *PortSwigger*.
   ![](/assets/rootd-Android14/Pswg.jpg)
 
-### [0x0322 - Cert-Fixer (>= Android 14, up to (the upcoming) Android 15)](#0x0322)
+### [0x0322 - Cert-Fixer (>= Android 14, up to (the upcoming) Android 15)](#0x0322---cert-fixer--android-14-up-to-the-upcoming-android-15)
 This is my personal method that I found from another blog. In the latest Android versions, starting from Android 14+ to the upcoming 15, the MMT Module method somehow not working for me. As a result, I found a [Reddit guide](https://www.reddit.com/r/ReverseEngineering/comments/16oer4p/new_ways_to_inject_system_ca_certificates_in/){:target="_blank"} on how to inject a (proxy) certificate into the `/system`, which there are another two methods; the method from HTTP Toolkit (I haven't tried that yet, but I'll leave to youse to research further) and the Cert-Fixer method, which is a module that can be used in Magisk.
 
 This module installs custom CA certificates to Android's system certificate storage. Once the module installed with Magisk, the script of the module will write/duplicate all the `user` CA certificates to the `system` CA certificate store during Android device reboot. This means we need to upload external certificates that stored to the `user` first. Although this method rather simple, it requires multiple reboots until the external certificate has been loaded into the `system` CA certificate.
@@ -321,7 +321,7 @@ Once it's done, reboot the Android device. During the reboot, the Magisk through
 
 Finally, we can verify the proxy certificate has been installed into the `system` by accessing *Settings* > *Security and privacy* > *More security settings* > *View security certificates* and look out for the proxy certs under the name `PortSwigger`.
 
-## [0x033 - Verify the certificate through traffic proxying](#0x033)
+## [0x033 - Verify the certificate through traffic proxying](#0x033---verify-the-certificate-through-traffic-proxying)
 > Prerequisites:
 > - TunProxy APK
 
@@ -343,14 +343,14 @@ Through this APK file, we can enter the localhost and the port, which often the 
 
 Once everything is set, the app traffic should now route through the proxy listener.
 
-# [0xff - External Sources and Other Guides](#0xff)
-## [Blogs](#0xff-blogs)
+# [0xff - External Sources and Other Guides](#0xff---external-sources-and-other-guides)
+## [Blogs](#blogs)
 - [OFFICIAL Samsung Odin v4 1.2.1-dc05e3ea - For Linux — XDA Forums](https://xdaforums.com/t/official-samsung-odin-v4-1-2-1-dc05e3ea-for-linux.4453423/){:target="_blank"}
 - [How to Root Samsung Galaxy S21/S21+/S21 Ultra using Magisk — Magisk](https://magiskapp.com/root-samsung-galaxy-s21-s21-plus-s21-ultra/){:target="_blank"}
 - [Start to Finish: Configuring an Android Phone for Pentesting — Black Hills Infosec](https://www.blackhillsinfosec.com/start-to-finish-configuring-an-Android-phone-for-pentesting/){:target="_blank"}
 - [New ways to inject system CA certificates in Android 14 — Reddit](https://www.reddit.com/r/ReverseEngineering/comments/16oer4p/new_ways_to_inject_system_ca_certificates_in/){:target="_blank"}
 - [Installing CA Certificates in System Store for Android 14+ — PwnLogs](https://blog.pwnlogs.dev/articles/cert-fixer/index.html){:target="_blank"}
 
-## [YouTube Guides](#0xff-yt-guides)
+## [YouTube Guides](#youtube-guides)
 - [How to Root Samsung Device using Magisk Easily - Android 14 — Tech Jarves](https://www.youtube.com/watch?v=HRCOMYwZIrs){:target="_blank"}
 - [How to Root the Samsung Galaxy S21/S21+/S21 Ultra - Magisk - Full Step-by Step Video Guide — MikeTheTechSavvy](https://www.youtube.com/watch?v=vOKWXVnlzdY){:target="_blank"}
