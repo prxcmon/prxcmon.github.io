@@ -9,7 +9,7 @@ title: prxcmon
 > "Hold up and analyze"
 > —Raekwon
 
-## 0x00 - whoami
+## 0x00 whoami
 
 - **Rachmadi Adji Prakoso**, a.k.a `prxcmon`
 - An _aficionado_ of offensive cyber security; proficient in the application-based IT Security for more than two years
@@ -17,7 +17,7 @@ title: prxcmon
 - Starting to learn scripting with C and Go, as well as keen to research other topics, including Linux Kernel Development
 - Fluent in native indonesian, as well as english, et je comprends français
 
-## 0x01 - work-exps
+## 0x01 work-exps
 
 ### [Cyberkarta](https://cyberkarta.com/){:target="_blank"}: In-contract Penetration Tester
 July 2024 — ongoing, end on July 2025
@@ -34,7 +34,7 @@ February 2022 — February 2024
 - Initiated the wireless network penetration testing
 - Aircrack-Ng, Burp Suite, Kismet, Nessus, OWASP ZAP, Postman, Qualys
 
-## 0x02 - certs
+## 0x02 certs
 
 ### 2025
 To be added (soon)
@@ -43,7 +43,7 @@ To be added (soon)
 - [OffSec Certified Professional (OSCP)](https://www.credential.net/e7050ed1-562f-416e-8426-40430aa5d864){:target="_blank"}
 - [Certified Ethical Hacker (CEH)](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=tQElESQyYapLQfAGVofD9HOnBD5V/ceblk1nQwKZIZk=){:target="_blank"}
 
-## 0x03 - links
+## 0x03 links
 ### projects
 - [GitHub](https://github.com/prxcmon){:target="_blank"}
 - [HackTheBox](https://app.hackthebox.com/profile/369370){:target="_blank"} (Rank: **Script Kiddie**)
