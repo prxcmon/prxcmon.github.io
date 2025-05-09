@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Grey Hat C
-date: 2025-05-19
+date: 2025-05-09
 category: "Programming"
 permalink: "/notes/programming/grey-hat-c.html"
 ---
+
 # 0x00 Intro
 ---
 This project is made for myself and for readers as well to learn "Grey Hat C" based on projects that I've created from many sources for personal use.
