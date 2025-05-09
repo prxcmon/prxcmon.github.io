@@ -5,6 +5,7 @@ date: 2025-04-27
 category: "Device Setup"
 permalink: "/notes/device-setup/rootd-Android14.html"
 ---
+
 # [0x00 - Intro](#0x00---intro)
 I'd like to share one of my guides on how to setup my Samsung Android device for pentesting purposes, from the beginning (android device rooting) until setting up certificates for proxy interception. Once everything is set, we can use it to perform APK pentesting engagements using our rooted android device.
 
